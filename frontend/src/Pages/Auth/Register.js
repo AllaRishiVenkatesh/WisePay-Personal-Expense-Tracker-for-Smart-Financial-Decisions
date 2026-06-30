@@ -70,7 +70,8 @@ const Register = () => {
         toast.error(data.message, toastOptions);
       }
     } catch (err) {
-      toast.error("Registration failed. Please try again.", toastOptions);
+      const errorMsg = err.response?.data?.message || "Registration failed. Please try again.";
+      toast.error(errorMsg, toastOptions);
     }
     setLoading(false);
   };

@@ -84,7 +84,9 @@ const Login = () => {
         }
       }
     } catch (error) {
-      toast.error(showOTPForm ? "OTP Verification failed." : "Login failed. Please check your credentials.", toastOptions);
+      const defaultMsg = showOTPForm ? "OTP Verification failed." : "Login failed. Please check your credentials.";
+      const errorMsg = error.response?.data?.message || defaultMsg;
+      toast.error(errorMsg, toastOptions);
     }
     setLoading(false);
   };
