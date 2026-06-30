@@ -1,0 +1,40 @@
+.containerBox{
+    height: 100%;
+}
+
+.avatarBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.avatar:hover{
+    border: 0.35rem solid var(--color-accent);
+
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.selected{
+    border: 0.35rem solid var(--color-primary) !important;
+    box-shadow: 0 0 22px var(--color-primary-glow);
+}
+
+.imgAvatar {
+    border-radius: 18px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media only screen and (max-width: 600px) {
+    .avatar:hover {
+        transform: none;
+    }
+
+    .imgAvatar {
+        border-radius: 14px;
+    }
+}
