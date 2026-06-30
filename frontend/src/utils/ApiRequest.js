@@ -1,4 +1,4 @@
-const host = "https://wisepay-personal-expense-tracker-for.onrender.com";
+const host = "https://wisepay-personal-expense-tracker-for-46ta.onrender.com";
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const changeNameAPI = `${host}/api/auth/changeName`;
 export const changePasswordAPI = `${host}/api/auth/changePassword`;
