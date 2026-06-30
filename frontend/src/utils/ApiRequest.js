@@ -1,6 +1,4 @@
-// const host = "https://expense-tracker-app-knl1.onrender.com";
-// const host = "https://wisepay-personal-expense-tracker-for.onrender.com";
-const host = "http://localhost:5000";
+const host = "https://wisepay.onrender.com";
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const changeNameAPI = `${host}/api/auth/changeName`;
 export const changePasswordAPI = `${host}/api/auth/changePassword`;
