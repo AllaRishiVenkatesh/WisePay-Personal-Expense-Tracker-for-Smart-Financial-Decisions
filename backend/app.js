@@ -31,7 +31,20 @@ const allowedOrigins = [
 app.use(express.json());
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      const isAllowed = 
+        allowedOrigins.includes(origin) || 
+        origin.startsWith("http://localhost:") || 
+        origin.endsWith(".onrender.com") || 
+        origin.endsWith(".vercel.app") || 
+        origin.includes("amplifyapp.com");
+      if (isAllowed) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
