@@ -1,4 +1,4 @@
-const host = "http://localhost:5000";
+const host = "https://wisepaybackend.onrender.com";
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const changeNameAPI = `${host}/api/auth/changeName`;
 export const changePasswordAPI = `${host}/api/auth/changePassword`;
